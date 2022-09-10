@@ -19,8 +19,8 @@ module.exports = {
                 unique: true,
             },
             bio: Sequelize.TEXT,
-            phoneNumber: Sequelize.STRING,
-            openToWork: {
+            phone_number: Sequelize.STRING,
+            open_to_work: {
                 type: Sequelize.BOOLEAN,
                 defaultValue: true,
             },

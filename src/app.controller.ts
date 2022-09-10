@@ -5,7 +5,7 @@ import { UserModel } from './models/users.model';
 export class AppController {
     @Get()
     async getUsers(): Promise<any> {
-        const userModel = await UserModel.findOne();
+        const userModel = await UserModel.findAll();
         return userModel;
     }
 
