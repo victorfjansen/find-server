@@ -1,6 +1,16 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
+import { CompanyModel } from './shared';
 
 @Controller('app')
 export class AppController {
-    constructor() {}
+    companyModel: typeof CompanyModel;
+
+    constructor() {
+        this.companyModel = CompanyModel;
+    }
+
+    @Get()
+    async somefunction(): Promise<any> {
+        return this.companyModel.findAll({ include: 'user' });
+    }
 }
